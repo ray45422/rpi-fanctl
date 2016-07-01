@@ -1,0 +1,7 @@
+{
+	"name": "fanctl",
+	"dependencies": {
+		"dgpio":"*"
+	},
+	"targetType": "executable",
+}
