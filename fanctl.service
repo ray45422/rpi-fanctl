@@ -1,0 +1,11 @@
+[Unit]
+Description=Fan controller
+
+[Service]
+Type=forking
+PIDFile=/run/fanctl.pid
+ExecStart=/usr/bin/fanctl
+ExecStop=rm /run/fanctl.pid
+
+[Install]
+WantedBy=multi-user.target
