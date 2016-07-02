@@ -2,7 +2,7 @@
 Description=Fan controller
 
 [Service]
-Type=forking
+Type=simple
 PIDFile=/run/fanctl.pid
 ExecStart=/usr/bin/fanctl
 ExecStop=rm /run/fanctl.pid
