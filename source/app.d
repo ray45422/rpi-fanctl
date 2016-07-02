@@ -23,7 +23,6 @@ int main(string[] args){
 	int power;
 	int powerPrev=0;
 	uint c=0;
-	writeln(getpid());
 	std.file.write(pidFile,getpid.to!string()~"\n");
 	gpio = new GPIO(17);
 	gpio.setOutput();
@@ -58,6 +57,7 @@ int main(string[] args){
 		}
 		powerPrev=power;
 	}
+	gpio.setLow();
 	gpio.deactivate();
 	return 0;
 }
